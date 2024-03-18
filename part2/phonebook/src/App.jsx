@@ -20,7 +20,9 @@ const App = ({ getPeople }) => {
   useEffect(hook, [])
 
   const handleNameChange = (event) => {
-    setNewName(event.target.value)
+    const val = event.target.value
+    const val2 = val.charAt(0).toUpperCase() + val.slice(1)
+    setNewName(val2)
   }
 
   const handleNumberChange = (event) => {
