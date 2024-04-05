@@ -1,5 +1,5 @@
 const personsRouter = require("express").Router()
-const Person = require("./models/person")
+const Person = require("../models/person")
 
 personsRouter.get("/api/persons", (req, res, next) => {
     Person.find({}).then(persons => res.json(persons)).catch(error => next(error))
@@ -58,4 +58,4 @@ personsRouter.get("/info", async (req, res) => {
     res.send(text)
 })
 
-modules.exports = personsRouter
+module.exports = personsRouter

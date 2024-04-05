@@ -11,7 +11,7 @@ mongoose.set("strictQuery", false)
 
 logger.info("connecting to", config.MONGODB_URI)
 
-mongoose.connect(config.MONGODB)YRL)
+mongoose.connect(config.MONGODB_URI)
     .then(() => {
         logger.info("Connected to MongoDB")
     })
